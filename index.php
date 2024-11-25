@@ -18,7 +18,6 @@ if ($data) {
         $message = $data['data']['message']['text'];
         error_log("Mensagem recebida de $from: $message");
         echo "Mensagem recebida de $from: $message" . PHP_EOL;
-        return;
     }
 } else {
     http_response_code(400);
