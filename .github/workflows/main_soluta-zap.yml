@@ -9,6 +9,10 @@ on:
       - main
   workflow_dispatch:
 
+- uses: azure/login@v1
+  with:
+    creds: ${{ secrets.AZURE_CREDENTIALS }}
+
 jobs:
   build:
     runs-on: ubuntu-latest

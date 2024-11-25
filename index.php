@@ -6,7 +6,9 @@ header("Content-Type: application/json");
 $payload = file_get_contents("php://input");
 $data = json_decode($payload, true);
 
-// print_r(var_dump($data));
+print_r(var_dump($data));
+echo PHP_EOL;
+echo PHP_EOL;
 
 // Verifica se os dados são válidos
 if ($data) {
