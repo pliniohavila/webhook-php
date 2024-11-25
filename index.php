@@ -6,9 +6,10 @@ header("Content-Type: application/json");
 $payload = file_get_contents("php://input");
 $data = json_decode($payload, true);
 
-print_r(var_dump($data));
-echo PHP_EOL;
-echo PHP_EOL;
+error_log("Date received:");
+error_log(var_dump($data));
+error_log(PHP_EOL);
+error_log(PHP_EOL);
 
 // Verifica se os dados são válidos
 if ($data) {
@@ -17,7 +18,7 @@ if ($data) {
         $from = $data['data']['from'];
         $message = $data['data']['message']['text'];
         error_log("Mensagem recebida de $from: $message");
-        echo "Mensagem recebida de $from: $message" . PHP_EOL;
+        // echo "Mensagem recebida de $from: $message" . PHP_EOL
     }
 } else {
     http_response_code(400);
