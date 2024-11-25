@@ -6,10 +6,8 @@ header("Content-Type: application/json");
 $payload = file_get_contents("php://input");
 $data = json_decode($payload, true);
 
-error_log("Date received:");
-error_log(var_dump($data));
-error_log(PHP_EOL);
-error_log(PHP_EOL);
+error_log("Payload received:");
+error_log(var_dump($payload));
 
 // Verifica se os dados são válidos
 if ($data) {
