@@ -7,7 +7,8 @@ $payload = file_get_contents("php://input");
 $data = json_decode($payload, true);
 
 error_log("Payload received:");
-error_log(var_dump($payload));
+error_log($payload);
+print_r($payload);
 
 // Verifica se os dados são válidos
 if ($data) {
